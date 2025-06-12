@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css background</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="banner-container">
+        <div class="content-block orange">
+            <p>This is the content for the top orange block. It would typically contain important information or a call to action. You can put a longer description here, similar to the image provided. This area is good for a channel slogan or a brief introduction to your content. Ensure the text is readable and concise.</p>
+        </div>
+
+        <div class="content-block yellow">
+            <p>This is the content for the middle yellow block. It can be used for more detailed information about your channel, such as what viewers can expect, your upload schedule, or a brief about your niche. Make sure the font size and color contrast well with the background. You can include keywords here to help with discoverability.</p>
+        </div>
+
+        <div class="content-block purple-gradient">
+            <p>This is the content for the bottom purple gradient block. This section could be used for social media links, a personal message, or a call to subscribe. The visual elements at the bottom of the original image, like the silhouette, would need to be part of the background image for this section or overlaid using CSS. This is a good spot to reinforce your brand.</p>
+        </div>
+    </div>
+</body>
+</html>
+<style>
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #1a0033; 
+    color: #fff; 
+}
+
+.banner-container {
+    width: 100%; 
+    max-width: 1920px; 
+    overflow: hidden;
+    position: relative;
+    background-image: url('https://www.freepik.com/free-ai-image/anime-style-mountains-landscape_122780681.htm#fromView=search&page=1&position=36&uuid=7f13b3bc-766a-4b68-aefd-f130db397ca0&query=Girl+Colorful+Background+without+face+with+mountain+'); /* Replace with your image path */
+    background-size: cover;
+    background-position: center bottom; 
+    padding-bottom: 25%; 
+    box-sizing: border-box;
+}
+
+.content-block {
+    position: absolute; 
+    left: 50%;
+    transform: translateX(-50%); 
+    width: 90%; 
+    max-width: 1600px; 
+    padding: 15px 30px;
+    margin-bottom: 20px; 
+    border-radius: 10px; 
+    box-sizing: border-box;
+    text-align: left;
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #333;
+}
+
+.orange {
+    background-color: #ff9900;
+    top: 5%; 
+}
+
+.yellow {
+    background-color: #ffff66; 
+    top: 35%;
+}
+
+.purple-gradient {
+    background: linear-gradient(to right, #663399, #9966cc);
+    top: 65%; 
+    color: #eee; 
+    border-radius: 0 0 20px 20px; 
+    padding-right: 45%;
+}
+
+@media (max-width: 1200px) {
+    .content-block {
+        font-size: 1em;
+        padding: 10px 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .content-block {
+        width: 95%;
+        padding: 8px 15px;
+        font-size: 0.9em;
+    }
+    .banner-container {
+        padding-bottom: 30%; 
+    }
+}
+</style>
